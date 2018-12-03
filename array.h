@@ -5,7 +5,7 @@
 #pragma once
 #include <iostream>
 #include <cstdlib>
-#include "array.h"
+#include <array>
 #include "type_name.h"
 
 using namespace std;
@@ -61,7 +61,7 @@ public:
     }customLess;
     void Sort() {
         int n = sizeof(m_array) / sizeof(m_array[0]);
-         (m_array, m_array + (size*n), customLess);
+         sort(m_array, m_array + (size*n), customLess);
     }
     // this works for both string and int.  
     void bubbleSort() {
