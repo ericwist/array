@@ -7,10 +7,12 @@
 #include <cstdlib>
 #include <array>
 #include "type_name.h"
+#include "macros.h"
 
 using namespace std;
 
 template<typename T> class CArray {
+
 private:
     int size;
     T *m_array;
@@ -21,6 +23,10 @@ public:
     {
         m_array = new T[size];
         memset(m_array, 0, size*(sizeof(m_array)/sizeof(m_array[0])));
+    }
+
+    ~CArray() {
+        SAFE_DELETEA(m_array);
     }
 
     void setArray(int elem, const T& val) {

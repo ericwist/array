@@ -26,5 +26,8 @@
     <ClInclude Include="type_name.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="macros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
