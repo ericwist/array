@@ -76,6 +76,7 @@ public:
             }
         }
     }
+    //move all zeros to the end of the array
     int moveZerosToEnd() {
         if (m_array == nullptr) {
             return 0;
