@@ -66,8 +66,7 @@ public:
         }
     }customLess;
     void Sort() {
-        int n = sizeof(m_array) / sizeof(m_array[0]);
-         sort(m_array, m_array + (size*n), customLess);
+         sort(m_array, m_array + size, customLess);
     }
     // this works for both string and int.  
     void bubbleSort() {
@@ -89,7 +88,7 @@ public:
         }
         int count = 0;
         for (int i = 0; i < size; ++i)
-        {
+        { 
             if (m_array[i] != 0)
             {
                 m_array[count++] = m_array[i];
