@@ -22,7 +22,7 @@ public:
         :size(s)
     {
         m_array = new T[size];
-        memset(m_array, 0, size*(sizeof(m_array)/sizeof(m_array[0])));
+        memset(m_array, 0, size*(sizeof(m_array)/sizeof(*m_array)));
     }
 
     ~CArray() {
@@ -101,6 +101,8 @@ public:
         }
         return ret;
     }
+    //compare
+    //insert element into arrary increase memory
 };
 
 
