@@ -51,10 +51,8 @@ public:
 
         while (e > b) {
             temp = *e;
-            *e = *b;
-            *b = temp;
-            ++b;
-            --e;
+            *e-- = *b;
+            *b++ = temp;
         }
         return;
     }
